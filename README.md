@@ -12,7 +12,7 @@ Systems architect building autonomous AI systems from Android/Termux. Self-taugh
 Python • TypeScript • LLM Integration • Semantic Graphs • Neo4j • Linux • Git
 
 ## Open Source Contributions
-- **JumpTechCode/quartermaster** — 4 merged PRs (test hardening, request validation bounds, N+1 batch-insert fix, public-API error shaping) on a concurrency-safe warehouse inventory engine
+- **JumpMasters/quartermaster** — 5 merged PRs (test hardening, validation bounds, N+1 batch-insert fix, public-API error shaping, identifier length caps) on a concurrency-safe warehouse inventory engine
 - **qorexdevs/quicksave** — 2 merged PRs (`find --count`, `diff --name-only`) on a filesystem checkpoint tool for AI agent workflows
 - **neo4j-labs/neocarta** — 1 merged PR (context-manager support across all source connectors), 5 open
 - **neo4j-labs/agent-memory** — 3 open PRs (REST/Bridge transport error mapping, ontology type safety, tool-call status handling)
