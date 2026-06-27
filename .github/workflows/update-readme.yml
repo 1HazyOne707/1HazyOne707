@@ -2,8 +2,8 @@ name: Update README with merged PRs
 
 on:
   schedule:
-    - cron: '0 6 * * *'  # daily at 6am UTC
-  workflow_dispatch:       # manual trigger
+    - cron: '0 6 * * *'
+  workflow_dispatch:
 
 jobs:
   update:
@@ -17,6 +17,7 @@ jobs:
         run: |
           python3 << 'PYEOF'
           import urllib.request
+          import urllib.parse
           import json
           import os
           import re
@@ -33,12 +34,9 @@ jobs:
               with urllib.request.urlopen(req) as r:
                   return json.load(r)
 
-          import urllib.parse
-
           data = gh_search("author:1HazyOne707 type:pr is:merged -repo:1HazyOne707/Codex-2")
           prs = data["items"]
 
-          # Group by repo
           repos = defaultdict(list)
           for pr in prs:
               repo = pr["repository_url"].split("/")[-2] + "/" + pr["repository_url"].split("/")[-1]
@@ -46,7 +44,6 @@ jobs:
 
           total = sum(len(v) for v in repos.values())
 
-          # Build contributions section
           lines = [
               "## Open Source Contributions",
               "",
@@ -54,7 +51,6 @@ jobs:
               "",
           ]
 
-          # Preferred order
           order = [
               "SikamikanikoBG/homelab-monitor",
               "JumpMasters/quartermaster",
@@ -66,17 +62,18 @@ jobs:
           shown = []
           for repo in order:
               if repo in repos:
-                  count = len(repos[repo])
+                  titles = repos[repo]
+                  count = len(titles)
                   prefix = f"{count} PRs: " if count > 1 else ""
+                  summary = ", ".join(t[:50] for t in titles[:3])
+                  lines.append(f"- **{repo}** — {prefix}{summary}")
                   shown.append(repo)
-                  lines.append(f"- **{repo}** — {prefix}{', '.join(repos[repo][0:3][:60] for _ in [1])}")
 
-          # Any remaining repos not in order
-          for repo, prs_list in repos.items():
+          for repo, titles in repos.items():
               if repo not in shown:
-                  count = len(prs_list)
+                  count = len(titles)
                   prefix = f"{count} PRs: " if count > 1 else ""
-                  lines.append(f"- **{repo}** — {prefix}{prs_list[0][:60]}")
+                  lines.append(f"- **{repo}** — {prefix}{titles[0][:60]}")
 
           lines.append("")
 
@@ -85,7 +82,6 @@ jobs:
           with open("README.md") as f:
               content = f.read()
 
-          # Replace between ## Open Source Contributions and ## Available
           new_content = re.sub(
               r"## Open Source Contributions.*?(?=## Available)",
               new_section + "\n",
