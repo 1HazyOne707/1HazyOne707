@@ -1,6 +1,7 @@
 # Jack Hawkins
 
-13 external merged PRs across 4 repositories in 11 days. Self-taught, building entirely from Android/Termux.
+12 external merged PRs across 4 repositories in 9 days. Self-taught, building entirely from Android/Termux.
+🐛 6 fix  ✨ 3 feat  📝 1 docs  🧪 1 test
 
 <img src="https://github-readme-stats.vercel.app/api?username=1HazyOne707&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true" height="160"/>
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=1HazyOne707&layout=compact&theme=github_dark&hide_border=true" height="160"/>
