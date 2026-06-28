@@ -31,7 +31,7 @@
 
 ## Open Source Contributions
 
-13 external merged PRs across 4 repositories — spanning documentation, bug fixes, test hardening, API design, performance, and architectural features.
+12 external merged PRs across 4 repositories — spanning documentation, bug fixes, test hardening, API design, performance, and architectural features.
 
 - **SikamikanikoBG/homelab-monitor** — TLS certificate expiry tracking with dashboard pill, schema migration, and expired-cert test coverage
 - **JumpMasters/quartermaster** — 5 PRs: N+1 batch-insert fix, public-API error shaping, request string length bounds, test hardening
