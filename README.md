@@ -10,23 +10,19 @@
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 
-
-
+ 
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
 
-
-
+ 
 
 ![Neo4j](https://img.shields.io/badge/Neo4j-008CC1?style=flat&logo=neo4j&logoColor=white)
 
-
-
+ 
 
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
 
-
-
+ 
 
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
 
@@ -34,12 +30,12 @@
 
 ## Open Source Contributions
 
-12 external merged PRs across 4 repositories — spanning documentation, bug fixes, test hardening, API design, performance, and architectural features.
+13 external merged PRs across 4 repositories — spanning documentation, bug fixes, test hardening, API design, performance, and architectural features.
 
-- **SikamikanikoBG/homelab-monitor** — Add TLS certificate expiry tracking for uptime che
-- **JumpMasters/quartermaster** — 5 PRs: fix: bound request string lengths (sku_id, locatio, fix: batch PgOrderRepo.insert_order line inserts (, fix: shape public-API error detail for validation 
-- **qorexdevs/quicksave** — 2 PRs: feat: add diff --name-only to print just the chang, feat: add find --count to print only the number of
-- **neo4j-labs/neocarta** — 4 PRs: docs: add search entry point index and embedding r, fix: log actual embedding write count instead of u, fix: hard-code platform=GCP and service=BIGQUERY o
+- **SikamikanikoBG/homelab-monitor** — TLS certificate expiry tracking with dashboard pill, schema migration, and expired-cert test coverage
+- **JumpMasters/quartermaster** — 5 PRs: N+1 batch-insert fix, public-API error shaping, request string length bounds, test hardening
+- **qorexdevs/quicksave** — 2 PRs: `find --count`, `diff --name-only`
+- **neo4j-labs/neocarta** — 5 PRs: context-manager support, BigQuery connector fix, embedding write count fix, search index docs, MCP startup fix
 
 ## Available for bounties & contracts
 hawkinsjr.jack@gmail.com

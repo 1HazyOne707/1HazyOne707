@@ -49,49 +49,19 @@ jobs:
 
           total = sum(len(v) for v in repos.values())
 
-          lines = [
-              "## Open Source Contributions",
-              "",
-              f"{total} external merged PRs across {len(repos)} repositories — spanning documentation, bug fixes, test hardening, API design, performance, and architectural features.",
-              "",
-          ]
-
-          order = [
-              "SikamikanikoBG/homelab-monitor",
-              "JumpMasters/quartermaster",
-              "qorexdevs/quicksave",
-              "neo4j-labs/neocarta",
-              "neo4j/neo4j-graphrag-python",
-          ]
-
-          shown = []
-          for repo in order:
-              if repo in repos:
-                  titles = repos[repo]
-                  count = len(titles)
-                  prefix = f"{count} PRs: " if count > 1 else ""
-                  summary = ", ".join(t[:50] for t in titles[:3])
-                  lines.append(f"- **{repo}** — {prefix}{summary}")
-                  shown.append(repo)
-
-          for repo, titles in repos.items():
-              if repo not in shown:
-                  count = len(titles)
-                  prefix = f"{count} PRs: " if count > 1 else ""
-                  lines.append(f"- **{repo}** — {prefix}{titles[0][:60]}")
-
-          lines.append("")
-
-          new_section = "\n".join(lines)
-
           with open("README.md") as f:
               content = f.read()
 
+          # Only update the count line, preserve curated descriptions
           new_content = re.sub(
-              r"## Open Source Contributions.*?(?=## Available)",
-              new_section + "\n",
+              r"(## Open Source Contributions\s*
+\s*
+)\d+[^
+]+
+",
+              f"\\1{total} external merged PRs across {len(repos)} repositories — spanning documentation, bug fixes, test hardening, API design, performance, and architectural features.
+",
               content,
-              flags=re.DOTALL,
           )
 
           with open("README.md", "w") as f:
