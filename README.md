@@ -20,7 +20,7 @@
 
 ### 🧭 What I do
 
-I contribute production-grade fixes and features to established open-source projects — not toy repos. My work spans **graph databases, RL training infrastructure, and developer tooling**, with a track record of getting PRs merged by real maintainers on real codebases.
+I contribute production-grade fixes and features to established open-source projects. My work spans **graph databases, RL training infrastructure, and developer tooling**, with a track record of getting PRs merged by real maintainers on real codebases.
 
 ```yaml
 focus:
