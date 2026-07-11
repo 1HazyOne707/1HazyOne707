@@ -1,0 +1,60 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="nucleusGrad" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#c589ff"/>
+      <stop offset="55%" stop-color="#9945FF"/>
+      <stop offset="100%" stop-color="#5b1fa8"/>
+    </radialGradient>
+    <radialGradient id="electron1" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#8dfff2"/>
+      <stop offset="60%" stop-color="#14F1D9"/>
+      <stop offset="100%" stop-color="#0b8f81"/>
+    </radialGradient>
+    <radialGradient id="electron2" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffb3b3"/>
+      <stop offset="60%" stop-color="#FF6B6B"/>
+      <stop offset="100%" stop-color="#a33333"/>
+    </radialGradient>
+    <radialGradient id="electron3" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#fff0a8"/>
+      <stop offset="60%" stop-color="#FFD93D"/>
+      <stop offset="100%" stop-color="#b89620"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="400" height="400" fill="#0d1117"/>
+
+  <g transform="rotate(0 200 200)">
+    <ellipse cx="200" cy="200" rx="150" ry="55" fill="none" stroke="#30363d" stroke-width="1.5"/>
+  </g>
+  <g transform="rotate(60 200 200)">
+    <ellipse cx="200" cy="200" rx="150" ry="55" fill="none" stroke="#30363d" stroke-width="1.5"/>
+  </g>
+  <g transform="rotate(120 200 200)">
+    <ellipse cx="200" cy="200" rx="150" ry="55" fill="none" stroke="#30363d" stroke-width="1.5"/>
+  </g>
+
+  <circle cx="200" cy="200" r="34" fill="url(#nucleusGrad)"/>
+  <circle cx="188" cy="188" r="8" fill="#ffffff" opacity="0.35"/>
+
+  <g transform="rotate(0 200 200)">
+    <circle r="9" fill="url(#electron1)">
+      <animateMotion dur="7s" repeatCount="indefinite"
+        path="M 350,200 A 150,55 0 1,1 50,200 A 150,55 0 1,1 350,200"/>
+    </circle>
+  </g>
+
+  <g transform="rotate(60 200 200)">
+    <circle r="10" fill="url(#electron2)">
+      <animateMotion dur="10s" repeatCount="indefinite"
+        path="M 350,200 A 150,55 0 1,1 50,200 A 150,55 0 1,1 350,200"/>
+    </circle>
+  </g>
+
+  <g transform="rotate(120 200 200)">
+    <circle r="7" fill="url(#electron3)">
+      <animateMotion dur="13s" repeatCount="indefinite"
+        path="M 350,200 A 150,55 0 1,1 50,200 A 150,55 0 1,1 350,200"/>
+    </circle>
+  </g>
+</svg>
