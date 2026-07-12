@@ -12,6 +12,11 @@
 </div>
 
 <div align="center">
+  <img src="./assets/fish_banner.svg" width="782" />
+</div>
+
+
+<div align="center">
   <img src="./assets/orbit.svg" width="300" />
 </div>
 
