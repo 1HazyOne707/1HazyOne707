@@ -1,6 +1,6 @@
 <div align="center">
 
-# Hey, I'm Jackie 👋
+# Hey, I'm Jack 👋
 
 **Systems Architect · Research Engineer · Autonomous Systems Developer**
 
