@@ -19,6 +19,10 @@
   <img src="./assets/fish_banner_mid.svg" width="782" />
 </div>
 
+<div align="center">
+  <img src="./assets/fish_banner_sharks.svg" width="782" />
+</div>
+
 
 ---
 
