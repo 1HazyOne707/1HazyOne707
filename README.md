@@ -4,7 +4,7 @@
 
 **Systems Architect · Research Engineer · Autonomous Systems Developer**
 
-*Self-taught. Multi-repo open-source contributor. Python, graph tooling, ML infrastructure.*
+*Self-taught. Multi-repo open-source contributor. Python, graph tooling, ML infrastructure. Using AI to rapidly understand; diagnose and repair architecture*
 
 [![Profile Views](https://komarev.com/ghpvc/?username=1HazyOne707&color=blueviolet&style=flat-square)](https://github.com/1HazyOne707)
 [![GitHub followers](https://img.shields.io/github/followers/1HazyOne707?style=flat-square&color=blueviolet)](https://github.com/1HazyOne707)
